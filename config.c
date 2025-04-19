@@ -365,7 +365,8 @@ JsonNode* get_json_object(JsonNode* node, const char* key) {
     return NULL;
 }
 
-void load_log_format_from_json(const char* filename, void (*add_format_callback)(const char*, const char*)) {
+// Было сложно понять работу с callback-функцей
+void load_log_format_from_json(const char* filename, void (*add_format_callback)(const char*, const char*)) { 
     char* json_str = read_file_contents(filename);
     if (json_str == NULL) {
         fprintf(stderr, "Error: Cannot read config file '%s'\n", filename);

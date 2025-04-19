@@ -3,13 +3,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "regex.h"
 #include <pthread.h>
 #include <time.h>
 #include <ctype.h>
 #include <stdbool.h>
 #include <errno.h>
 
+#include "regex.h"
 #include "log_analyzer.h"
 
 void init_log_formats(LogFormat** formats, int* num_formats) {

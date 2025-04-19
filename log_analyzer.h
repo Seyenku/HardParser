@@ -1,9 +1,10 @@
 #ifndef LOG_ANALYZER_H
 #define LOG_ANALYZER_H
 
-#include "regex.h"
 #include <stdbool.h>
 #include <time.h>
+
+#include "regex.h"
 
 typedef struct {
     char* ip;
