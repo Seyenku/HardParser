@@ -16,7 +16,7 @@ void init_log_formats(LogFormat** formats, int* num_formats) {
     *num_formats = 2;
     *formats = (LogFormat*)malloc(*num_formats * sizeof(LogFormat));
 
-    (*formats)[0].name = _strdup("common");
+    (*formats)[0].name = _strdup("common"); // делает копию строки и возвращает новый указатель.
     (*formats)[0].pattern = _strdup("^([\\d.]+) \\S+ \\S+ \\[([^\\]]+)\\] \"([A-Z]+) ([^ \"]+)[^\"]*\" (\\d+) (\\d+|-)$");
     compile_regex(&(*formats)[0]);
 
